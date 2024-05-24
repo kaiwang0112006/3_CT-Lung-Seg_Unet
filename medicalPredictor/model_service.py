@@ -41,14 +41,14 @@ def alzheimer_clean_main():
 def upload_file():
     f = request.files['file']
     f.save(r"/tmp/%s" % f.filename)
-    return redirect(url_for('alzheimer_clean_predict', file_msg=f.filename))
+    return redirect(url_for('clean_predict', file_msg=f.filename))
 
-@app.route('/alzheimer_clean_predict' , methods=['GET'])
+@app.route('/clean_predict' , methods=['GET'])
 def alzheimer_clean_predict():
     file_msg = request.args['file_msg']
-    return render_template(r"alzheimer_clean_predict.html",file_msg=file_msg)
+    return render_template(r"clean_predict.html",file_msg=file_msg)
 
-@app.route('/alzheimer_clean' , methods=['POST'])
+@app.route('/clean' , methods=['POST'])
 def alzheimer_clean():
     """
 
