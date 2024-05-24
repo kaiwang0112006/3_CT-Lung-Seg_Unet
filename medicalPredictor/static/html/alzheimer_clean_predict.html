@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="static/js/jquery110.js"></script>
+    <script src="static/js/predict.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script type="text/javascript" src="http://get.goXTK.com/xtk_edge.js"></script>
+    <script type="text/javascript" src="static/js/medicalimageviewer/x-master/visualization/renderer3D.js"></script>
+
+    <title>AD predictor</title>
+  </head>
+  <body>
+    <h1>AD predictor</h1>
+    <form method="POST" action="/upload_file" enctype="multipart/form-data">
+      <p><input type="file" name="file"></p>
+      <p><input type="submit" value="Submit"></p>
+    </form>
+    <div id="result" style="float:left;position:absolute;height: 100%; width:100%">
+        <p id="filename" style="visibility: hidden;">{{file_msg}}</p>
+        <div id="loading"></div>
+        <p id="pred"></p>
+ 	<div>
+	</div>
+
+  <script type="text/javascript">
+	   $(document).ready(function () {
+	   	  niipredict()
+	   });
+  </script>
+  </body>
+</html>

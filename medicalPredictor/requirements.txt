@@ -1,0 +1,11 @@
+pandas==0.23.4
+torch==1.9.0
+Flask==1.0.2
+PyYAML==5.4.1
+transformers==4.9.2
+scipy==1.7.1
+sentencepiece
+scikit-learn==0.24.2
+sqlalchemy==1.2.11
+git+https://Kai.Wang23:Milo2009*@gitlab.geely.com/f-geelyecology/bdp/word_token@master
+git+https://Kai.Wang23:Milo2009*@gitlab.geely.com/f-geelyecology/bdp/emotionwords.git@master

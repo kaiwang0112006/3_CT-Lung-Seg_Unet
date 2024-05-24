@@ -1,0 +1,1 @@
+from model_service import app as application
